@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pernikahan Romeo & Juliet - Undangan Digital</title>
+    <meta name="description"
+        content="Undangan digital resmi pernikahan Romeo & Juliet. Bergabunglah merayakan hari bahagia kami pada 22 Oktober 2026.">
+    <meta name="keywords" content="undangan pernikahan, undangan digital, pernikahan Romeo Juliet">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pernikahan Romeo & Juliet">
+    <meta property="og:description" content="Kami mengundang Anda untuk merayakan hari pernikahan kami.">
+    <meta property="og:image" content="assets/images/hero_background_1771762842986.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SPLASH SCREEN / COVER -->
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-ornament splash-ornament-tl">
+            <img src="assets/images/floral_texture_1771762894984.png" alt="">
+        </div>
+        <div class="splash-ornament splash-ornament-br">
+            <img src="assets/images/floral_texture_1771762894984.png" alt="">
+        </div>
+
+        <div class="splash-content">
+            <p class="splash-subtitle">Bismillahirrahmannirrahim</p>
+            <h2 class="splash-title">Romeo & Juliet</h2>
+
+            <div class="splash-guest-box">
+                <p>Kepada Yth.</p>
+                <p>Bapak/Ibu/Saudara/i:</p>
+                <h3 id="guest-name-splash" class="guest-name">Tamu Undangan</h3>
+            </div>
+
+            <button id="open-invitation" class="btn-open">
+                <i class="fas fa-envelope-open-text"></i> Buka Undangan
+            </button>
+
+            <p class="splash-footer">Klik tombol untuk membuka undangan</p>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="parallax-bg" id="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-subtitle anime-item">KAMI AKAN MENIKAH</p>
+                <h1 class="hero-title anime-item">Romeo & Juliet</h1>
+                <div class="hero-date anime-item">22 . 10 . 2026</div>
+
+                <!-- Countdown -->
+                <div class="countdown-container anime-item">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <p>Hari</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <p>Jam</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <p>Menit</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <p>Detik</p>
+                    </div>
+                </div>
+
+                <div class="scroll-ind anime-item">
+                    <span>SCROLL KE BAWAH</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Couple Section -->
+        <section class="couple-section" id="couple">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Pasangan Berbahagia</h2>
+                </div>
+
+                <div class="couple-grid">
+                    <div class="couple-card groom reveal-left">
+                        <div class="image-wrapper">
+                            <img src="assets/images/couple_photo_1771762872096.png" alt="Romeo Montague - Mempelai Pria"
+                                class="parallax-img" data-speed="0.15" loading="lazy">
+                        </div>
+                        <h3>Romeo Montague</h3>
+                        <p>Putra dari Bpk. Montague & Ibu Montague</p>
+                        <div class="socials">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="couple-card heart-center fade-in">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="couple-card bride reveal-right">
+                        <div class="image-wrapper">
+                            <img src="assets/images/couple_photo_1771762872096.png"
+                                alt="Juliet Capulet - Mempelai Wanita" class="parallax-img" data-speed="0.15"
+                                loading="lazy">
+                        </div>
+                        <h3>Juliet Capulet</h3>
+                        <p>Putri dari Bpk. Capulet & Ibu Capulet</p>
+                        <div class="socials">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story/Parallax Section -->
+        <section class="story-parallax">
+            <div class="parallax-overlay" id="story-bg"></div>
+            <div class="container">
+                <div class="story-content reveal">
+                    <h2>Perjalanan Kami</h2>
+                    <p>Dimulai dengan sebuah tatapan, lalu bisikan, dan sekarang kami di sini, memulai selamanya. Kami
+                        mengundang Anda untuk menjadi bagian dari hari terindah kami.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Section -->
+        <section class="event-section" id="event">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Waktu & Tempat</h2>
+                </div>
+
+                <div class="event-grid">
+                    <div class="event-card reveal">
+                        <div class="event-icon">
+                            <i class="fa-solid fa-ring"></i>
+                        </div>
+                        <h3>Akad Nikah</h3>
+                        <div class="event-details">
+                            <p><i class="fa-regular fa-calendar"></i> Sabtu, 22 Okt 2026</p>
+                            <p><i class="fa-regular fa-clock"></i> 09:00 WIB - 11:00 WIB</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna Senayan, Jakarta</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/Y1AvaHDDGdmqVFUv6" target="_blank" class="btn-map">Lihat
+                            Peta</a>
+                    </div>
+
+                    <div class="event-card reveal">
+                        <div class="event-icon">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                        </div>
+                        <h3>Resepsi Pernikahan</h3>
+                        <div class="event-details">
+                            <p><i class="fa-regular fa-calendar"></i> Sabtu, 22 Okt 2026</p>
+                            <p><i class="fa-regular fa-clock"></i> 13:00 WIB - 17:00 WIB</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Monumen Nasional (Monas), Jakarta</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/1FuUfikqXLF26Wfy8" target="_blank" class="btn-map">Lihat
+                            Peta</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Momen Bahagia Kami</h2>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal"><img
+                            src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop"
+                            alt="Momen Pernikahan 1" loading="lazy"></div>
+                    <div class="gallery-item reveal"><img
+                            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop"
+                            alt="Momen Pernikahan 2" loading="lazy"></div>
+                    <div class="gallery-item reveal"><img
+                            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop"
+                            alt="Momen Pernikahan 3" loading="lazy"></div>
+                    <div class="gallery-item reveal"><img
+                            src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop"
+                            alt="Momen Pernikahan 4" loading="lazy"></div>
+                    <div class="gallery-item reveal"><img
+                            src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800&auto=format&fit=crop"
+                            alt="Momen Pernikahan 5" loading="lazy"></div>
+                    <div class="gallery-item reveal"><img
+                            src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=800&auto=format&fit=crop"
+                            alt="Momen Pernikahan 6" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Section -->
+        <section class="gift-section" id="gift" style="padding: 80px 0; background: var(--color-xlite);">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Wedding Gift</h2>
+                    <p>Doa restu Anda merupakan hadiah terindah bagi kami. Namun jika Anda ingin memberikan tanda kasih,
+                        Anda dapat mengirimkannya melalui:</p>
+                </div>
+                <div class="gift-grid reveal"
+                    style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 40px; text-align: center;">
+
+                    <!-- Bank Card -->
+                    <div class="gift-card"
+                        style="background: white; border: 1px solid rgba(0,0,0,0.05); border-radius: 20px; padding: 40px 30px; width: 320px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA"
+                            style="height: 35px; margin-bottom: 25px;">
+                        <p style="font-size: 1.4rem; letter-spacing: 2px; font-weight: bold; margin-bottom: 8px; color: var(--color-dark);"
+                            id="account-number">
+                            1234567890</p>
+                        <p style="margin-bottom: 25px; color: var(--color-medium); font-size: 0.9rem;">a/n Romeo
+                            Montague</p>
+                        <button onclick="copyValue('1234567890', this)"
+                            style="background: var(--color-dark); color: #fff; padding: 12px 25px; border: none; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.3s; width: 100%;">
+                            <i class="fas fa-copy" style="margin-right: 8px;"></i> Salin Rekening
+                        </button>
+                        <p class="copy-hint" style="font-size: 0.7rem; color: var(--color-medium); margin-top: 10px;">
+                            Klik tombol di atas untuk menyalin nomor rekening</p>
+                    </div>
+
+                    <!-- Address Card -->
+                    <div class="gift-card"
+                        style="background: white; border: 1px solid rgba(0,0,0,0.05); border-radius: 20px; padding: 40px 30px; width: 320px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                        <i class="fas fa-gift"
+                            style="font-size: 2.5rem; color: var(--color-light); margin-bottom: 20px;"></i>
+                        <h4 style="margin-bottom: 15px; font-family: var(--serif); font-size: 1.5rem;">Kirim Kado</h4>
+                        <p
+                            style="margin-bottom: 20px; color: var(--color-medium); font-size: 0.9rem; line-height: 1.6;">
+                            Jl. Raya Kebahagiaan No. 123,<br>
+                            Kec. Sukacita, Jakarta Selatan,<br>
+                            DKI Jakarta 12345
+                        </p>
+                        <button
+                            onclick="copyValue('Jl. Raya Kebahagiaan No. 123, Kec. Sukacita, Jakarta Selatan, DKI Jakarta 12345', this)"
+                            style="background: transparent; color: var(--color-dark); border: 1.5px solid var(--color-dark); padding: 11px 25px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.3s; width: 100%;">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Salin Alamat
+                        </button>
+                        <p class="copy-hint" style="font-size: 0.7rem; color: var(--color-medium); margin-top: 10px;">
+                            Klik tombol di atas untuk menyalin alamat pengiriman</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Wedding Gift & Ucapan -->
+        <section class="gift-section" id="rsvp">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Konfirmasi & Ucapan</h2>
+                    <p>Kehadiran dan doa restu Anda adalah karunia yang sangat berarti bagi kami.</p>
+                </div>
+
+                <!-- Guestbook Section -->
+                <div class="guestbook-section reveal">
+                    <h3>Kirim Ucapan & Konfirmasi</h3>
+                    <form id="whatsapp-form" class="guestbook-form">
+                        <input type="text" id="guest-name" placeholder="Nama Anda" required>
+                        <select id="rsvp-status" required>
+                            <option value="" disabled selected>Konfirmasi Kehadiran</option>
+                            <option value="Saya Akan Hadir">Saya Akan Hadir</option>
+                            <option value="Mohon Maaf, Saya Berhalangan">Mohon Maaf, Saya Berhalangan</option>
+                        </select>
+                        <textarea id="guest-message" placeholder="Tulis ucapan & doa Anda di sini..." rows="4"
+                            required></textarea>
+                        <button type="submit" class="btn-rsvp">Kirim Ucapan</button>
+                    </form>
+                </div>
+
+                <!-- Dynamic wishes list -->
+                <div class="wishes-display reveal" style="margin-top: 40px;">
+                    <h3 style="text-align: center; margin-bottom: 25px;">Ucapan & Doa Terbaru</h3>
+                    <div id="wish-list" class="wish-list-container">
+                        <!-- Wishes will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer/RSVP -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content reveal">
+                    <h2>Terima Kasih</h2>
+                    <p>Kehadiran Anda sangat berarti bagi kami.</p>
+                    <div class="rsvp-box">
+                        <a href="#rsvp" class="btn-rsvp"
+                            style="display: inline-block; text-decoration: none;">Konfirmasi Kehadiran</a>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 Pernikahan Romeo & Juliet. Dibuat dengan Cinta.</p>
+                        <p style="margin-top: 15px; font-size: 0.7rem; opacity: 0.4;">
+                            <a href="ubah-namatamu.html" style="color: inherit; text-decoration: none;">
+                                <i class="fas fa-cog"></i> Generator Undangan
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Music Player -->
+    <div class="music-control" id="music-btn">
+        <i class="fa-solid fa-compact-disc disc-animation"></i>
+        <audio id="bg-music" loop>
+            <source src="assets/music/Duara - And Time Froze (Official Visualizer).mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Lightbox/Popup -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Gambar Pop-up" id="lightbox-img">
+    </div>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

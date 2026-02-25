@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Undangan - Romeo & Juliet</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-dark: #452829;
+            --color-medium: #57595b;
+            --color-light: #e8d1c5;
+            --color-xlite: #f3e8df;
+            --serif: 'Playfair Display', serif;
+            --sans: 'Outfit', sans-serif;
+            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body {
+            font-family: var(--sans);
+            background-color: var(--color-xlite);
+            background-image: url('assets/images/floral_texture_1771762894984.png');
+            background-size: 300px;
+            color: var(--color-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .generator-container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 50px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            max-width: 550px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            position: relative;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: var(--serif);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: var(--color-dark);
+        }
+
+        p.subtitle {
+            color: var(--color-medium);
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--color-dark);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 18px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--color-light);
+            background: white;
+            box-shadow: 0 5px 15px rgba(69, 40, 41, 0.05);
+        }
+
+        button.btn-generate {
+            width: 100%;
+            padding: 18px;
+            background-color: var(--color-dark);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        button.btn-generate:hover {
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(69, 40, 41, 0.1);
+        }
+
+        .result-box {
+            margin-top: 40px;
+            display: none;
+            animation: slideUp 0.6s ease-out;
+            padding-top: 30px;
+            border-top: 1px dashed var(--color-light);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 180px;
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            resize: none;
+            background-color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            color: #555;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-copy,
+        .btn-wa {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .btn-copy {
+            background-color: #f1f5f9;
+            color: var(--color-dark);
+        }
+
+        .btn-wa {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-wa:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            color: var(--color-medium);
+            text-decoration: none;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+            color: var(--color-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="generator-container">
+        <h2>Buku Tamu</h2>
+        <p class="subtitle">Buat pesan undangan WhatsApp khusus untuk tamu Anda</p>
+
+        <div class="form-group">
+            <label for="guestName">Nama Tamu / Penerima:</label>
+            <input type="text" id="guestName" placeholder="Contoh: Keluarga Bapak Budi" autocomplete="off">
+        </div>
+
+        <button class="btn-generate" onclick="generateLink()">
+            Buat Undangan <i class="fas fa-magic"></i>
+        </button>
+
+        <div class="result-box" id="resultBox">
+            <label>Hasil Pesan WhatsApp:</label>
+            <textarea id="resultText" readonly></textarea>
+
+            <div class="action-buttons">
+                <button class="btn-copy" onclick="copyText()">
+                    <i class="fas fa-copy"></i> Salin Teks
+                </button>
+                <a href="#" class="btn-wa" id="btnWa" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Kirim WA
+                </a>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Kembali ke Undangan</a>
+    </div>
+
+    <script>
+        function generateLink() {
+            const rawName = document.getElementById('guestName').value.trim();
+            if (!rawName) {
+                alert("Harap masukkan nama tamu!");
+                return;
+            }
+
+            let currentUrl = window.location.href.split(/[?#]/)[0];
+            let baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/'));
+            if (!baseUrl.endsWith('/')) baseUrl += '/';
+            baseUrl += 'index.html';
+
+            const encodedName = encodeURIComponent(rawName);
+            const fullLink = `${baseUrl}?to=${encodedName}`;
+
+            const messageTemplate = `Bismillahirrahmanirrahim.
+Assalamu’alaikum Warahmatullahi Wabarakatuh.
+ 
+Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i:
+
+*${rawName}*
+
+untuk hadir dan memberikan doa restu pada acara pernikahan kami:
+Romeo & Juliet.
+
+Link Undangan:
+${fullLink}
+ 
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir di acara pernikahan kami.
+ 
+Terima kasih.`;
+
+            const resultBox = document.getElementById('resultBox');
+            const resultText = document.getElementById('resultText');
+            const btnWa = document.getElementById('btnWa');
+
+            resultText.value = messageTemplate;
+            resultBox.style.display = 'block';
+
+            const waLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(messageTemplate)}`;
+            btnWa.href = waLink;
+
+            resultBox.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyText() {
+            const resultText = document.getElementById('resultText');
+            resultText.select();
+            navigator.clipboard.writeText(resultText.value);
+
+            const copyBtn = document.querySelector('.btn-copy');
+            const original = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check"></i> Tersalin!';
+            copyBtn.style.color = '#166534';
+
+            setTimeout(() => {
+                copyBtn.innerHTML = original;
+                copyBtn.style.color = '';
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
